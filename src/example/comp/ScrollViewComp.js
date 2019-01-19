@@ -29,6 +29,15 @@ class ScrollViewComp extends Component {
         },5000);
     }
 
+    _contentViewScroll = (e) => {
+        var offsetY = e.nativeEvent.contentOffset.y; //滑动距离
+        var contentSizeHeight = e.nativeEvent.contentSize.height; //scrollView contentSize高度
+        var oriageScrollHeight = e.nativeEvent.layoutMeasurement.height; //scrollView高度
+        if (offsetY + oriageScrollHeight >= contentSizeHeight){
+            console.log('上传滑动到底部事件');
+        }
+    }
+
     render() {
         var list = (length) => {
             var res = [];
@@ -64,6 +73,7 @@ class ScrollViewComp extends Component {
                 onMomentumScrollEnd={()=>{}} // 滚动惯性动画结束时触发的函数
                 onScrollBeginDrag={()=>{}} // 拖拽开始时触发的函数
                 onScrollEndDrag={()=>{}} // 拖拽结束时触发的函数
+                onScroll = {this._contentViewScroll} // 获取滑动数据
             >
                 <TextInputComp />
                 {list(50)}
