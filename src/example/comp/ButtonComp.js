@@ -12,9 +12,9 @@ class ButtonComp extends React.Component{
         return(
             <View style={styles.viewStyle}>
                 <Button
-                    onPress={this._onPress}
-                    title="Submit"
-                    color="#841584"
+                    onPress={this._onPress} 
+                    title="Submit" // 标签
+                    color="#841584" // 背景色
                 />
                 <Button
                     onPress={this._onPress}
