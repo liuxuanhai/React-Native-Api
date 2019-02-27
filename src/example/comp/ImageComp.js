@@ -3,6 +3,7 @@ import { View, Text, Image, ImageBackground, StyleSheet } from 'react-native';
 
 // 如果有my-icon.ios.png和my-icon.android.png，Packager就会根据平台而选择不同的文件
 // 还可以使用@2x，@3x这样的文件名后缀，来为不同的屏幕精度提供图片
+// 要注意图片属性API
 
 class ImageComp extends Component {
 

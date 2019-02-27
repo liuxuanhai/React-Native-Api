@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, PanResponder, StyleSheet } from 'react-native';
 
+// 触屏手势
 class PanResponderAPI extends React.Component {
 
     UNSAFE_componentWillMount() {

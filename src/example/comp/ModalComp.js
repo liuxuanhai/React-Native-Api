@@ -33,7 +33,7 @@ class ModalComp extends React.Component{
                 </View>
 
                 <Modal
-                    animationType='slide' // 指定了 modal 的动画类型。类型：slide 从底部滑入滑出|fade 淡入淡出|none 没有动画
+                    animationType='fade' // 指定了 modal 的动画类型。类型：slide 从底部滑入滑出|fade 淡入淡出|none 没有动画
                     transparent={true} // 背景是否透明，默认为白色，当为true时表示背景为透明。
                     visible={this.state.modalVisible} // 是否显示 modal 窗口
                     onRequestClose={() => { this._closeModalWin(); }} // 回调会在用户按下 Android 设备上的后退按键或是 Apple TV 上的菜单键时触发。请务必注意本属性在 Android 平台上为必填，且会在 modal 处于开启状态时阻止BackHandler事件

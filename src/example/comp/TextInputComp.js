@@ -4,7 +4,7 @@ import { View, TextInput, StyleSheet } from 'react-native';
 class TextInputComp extends Component {
     constructor(props){
         super(props);
-        this.state = {
+        this.state = { 
             text: ''
         };
     }
