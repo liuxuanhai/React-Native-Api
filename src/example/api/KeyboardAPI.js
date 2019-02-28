@@ -2,17 +2,15 @@ import React, { Component } from 'react';
 import { View, TextInput, StyleSheet, TouchableWithoutFeedback, Keyboard } from 'react-native';
 
 class KeyboardAPI extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            text: ''
-        };
-    }
 
+    state = {
+        text: ''
+    };
+    
     componentDidMount () {
         this.keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', this._keyboardDidShow);
         this.keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', this._keyboardDidHide);
-      }
+    }
     
     componentWillUnmount () {
         this.keyboardDidShowListener.remove();
@@ -20,19 +18,15 @@ class KeyboardAPI extends Component {
     }
 
     _keyboardDidShow () {
-        console.log('Keyboard Shown');
+        console.log('软键盘显示');
     }
 
     _keyboardDidHide () {
-        console.log('Keyboard Hidden');
+        console.log('软键盘隐藏');
     }
 
     onChangeTextHandle = (value) => {
         this.setState({text: value});
-    }
-
-    onSubmitEditingHandle = () => {
-        console.log('完成输入');
     }
 
     onBlurHandle = () => {
@@ -45,15 +39,14 @@ class KeyboardAPI extends Component {
             <TouchableWithoutFeedback
                 onPress={this.onBlurHandle}
             >
-                <View style={styles.viewStyle}>
+                <View style={styles.containerStyle}>
                     <TextInput
                         style={styles.TextInputStyle} 
                         value={this.state.text} 
-                        placeholder="code some message..."
+                        placeholder="请输入您需要的商品"
                         placeholderTextColor='#A4A4A4'
                         onChangeText={this.onChangeTextHandle}
                         onBlur={this.onBlurHandle}
-                        onSubmitEditing={this.onSubmitEditingHandle}
                     />
                 </View>
             </TouchableWithoutFeedback>
@@ -62,7 +55,12 @@ class KeyboardAPI extends Component {
 }
 
 const styles = StyleSheet.create({
+    containerStyle: {
+        flex: 1,
+        backgroundColor: '#E4E4E4'
+    },
     TextInputStyle: {
+        margin: 10,
         padding: 0,
         height: 50, 
         borderColor: 'green', 
@@ -70,10 +68,8 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         fontSize: 16,
         color: '#000000',
-        paddingLeft: 10
-    },
-    viewStyle: {
-        flex: 1
+        paddingLeft: 10,
+        backgroundColor: '#FFFFFF'
     }
 });
 

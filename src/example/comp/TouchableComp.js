@@ -1,38 +1,28 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Text, TouchableHighlight, TouchableOpacity } from 'react-native';
+import { 
+    View, 
+    StyleSheet, 
+    Text, 
+    TouchableHighlight, 
+    TouchableOpacity 
+} from 'react-native';
 
 class TouchableComp extends Component {
 
-    _onPressHeighlight = () => {
-        console.log('TouchableHighlight-onPress');
+    _onPress = () => {
+        console.log('onPress');
     }
 
-    _onPressOutHeighlight = () => {
-        console.log('TouchableHighlight-onPressOut');
+    _onPressOut = () => {
+        console.log('onPressOut');
     }
 
-    _onPressInHeighlight = () => {
-        console.log('TouchableHighlight-onPressIn');
+    _onPressIn = () => {
+        console.log('onPressIn');
     }
 
-    _onLongPressHeighlight = () => {
-        console.log('TouchableHighlight-onLongPress');
-    }
-
-    _onPressOpacity = () => {
-        console.log('TouchableOpacity-onPress');
-    }
-
-    _onPressOutOpacity = () => {
-        console.log('TouchableOpacity-onPressOut');
-    }
-
-    _onPressInOpacity = () => {
-        console.log('TouchableOpacity-onPressIn');
-    }
-
-    _onLongPressOpacity = () => {
-        console.log('TouchableOpacity-onLongPress');
+    _onLongPress = () => {
+        console.log('onLongPress');
     }
 
     render() {
@@ -40,25 +30,25 @@ class TouchableComp extends Component {
             <View>
                 <TouchableHighlight
                     style={styles.buttonStyle}
-                    onPress={this._onPressHeighlight}
-                    onPressIn={this._onPressInHeighlight}
-                    onPressOut={this._onPressOutHeighlight}
+                    onPress={this._onPress}
+                    onPressIn={this._onPressIn}
+                    onPressOut={this._onPressOut}
+                    onLongPress={this._onLongPress}
+                    activeOpacity={0.85}
                     delayLongPress={3800}
-                    onLongPress={this._onLongPressHeighlight}
-                    activeOpacity={0.85} // 指定封装的视图在被触摸操作激活时以多少不透明度显示（0到1之间）,默认值为0.85
-                    underlayColor='red' // 有触摸操作时显示出来的底层的颜色
+                    underlayColor='green'
                 >
                     <Text style={styles.textStyle}>TouchableHighlight</Text>
                 </TouchableHighlight>
 
                 <TouchableOpacity
                     style={styles.buttonStyle}
-                    onPress={this._onPressOpacity}
-                    onPressIn={this._onPressInOpacity}
-                    onPressOut={this._onPressOutOpacity}
+                    onPress={this._onPress}
+                    onPressIn={this._onPressIn}
+                    onPressOut={this._onPressOut}
+                    onLongPress={this._onLongPress}
                     delayLongPress={3800}
-                    onLongPress={this._onLongPressOpacity}
-                    activeOpacity={0.2} // 指定封装的视图在被触摸操作激活时以多少不透明度显示（0到1之间）,默认值为0.2
+                    activeOpacity={0.2}
                 >
                     <Text style={styles.textStyle}>TouchableOpacity</Text>
                 </TouchableOpacity>
@@ -69,18 +59,17 @@ class TouchableComp extends Component {
 
 const styles = StyleSheet.create({
     buttonStyle:{
-        borderWidth: 1,
-        borderRadius: 4,
-        borderColor: '#007AFF',
+        justifyContent: 'center',
+        borderColor: '#000000',
         backgroundColor: '#DDDDDD',
-        padding: 8,
-        margin: 10
+        borderWidth: 1,
+        borderRadius: 10,
+        margin: 20,
+        height: 50
     },
     textStyle:{
         fontSize: 16,
-        color: '#007AFF',
-        marginLeft: 16,
-        marginRight: 16,
+        color: '#000000',
         alignSelf: 'center'
     }
 });

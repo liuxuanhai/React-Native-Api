@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import TextInputComp from '../example/comp/TextInputComp';
+import SectionListComp from '../example/comp/SectionListComp';
 
 class MainView extends Component {
     render(){
         return (
             <View style={{flex:1}}>
-                <TextInputComp />
+                <SectionListComp />
             </View>
         );
     }
