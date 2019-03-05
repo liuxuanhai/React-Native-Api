@@ -1,0 +1,2 @@
+react-native link
+你就可以在 plist 文件（iOS）或 android/app/src/main/assets/fonts（安卓）中看到对应配置

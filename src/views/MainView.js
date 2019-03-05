@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import SectionListComp from '../example/comp/SectionListComp';
+import AnimatedComp from '../example/comp/Animated/AnimatedComp';
 
 class MainView extends Component {
     render(){
         return (
             <View style={{flex:1}}>
-                <SectionListComp />
+                <AnimatedComp />
             </View>
         );
     }

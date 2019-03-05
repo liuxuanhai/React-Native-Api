@@ -3,13 +3,10 @@ import { View, Text, Modal, StyleSheet, Button } from 'react-native';
 
 class ModalComp extends React.Component{
 
-    constructor(props){
-        super(props);
-        this.state = {
+    state = {
             modalVisible: false
-        };
-    }
-
+    };
+    
     _openModalWin = () => {
         this.setState({modalVisible: true});
     }
@@ -29,7 +26,7 @@ class ModalComp extends React.Component{
                         title="打开Modal窗口"
                         color="#841584"
                         onPress={this._openModalWin}
-                    ></Button>
+                    />
                 </View>
 
                 <Modal

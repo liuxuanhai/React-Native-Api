@@ -9,36 +9,45 @@ import {
 } from 'react-native';
 import PropTypes from 'prop-types';
 
-const {width} =Dimensions.get('window');
+const {width} = Dimensions.get('window');
 
-// 底部选项弹窗
 class ActionSheetComp extends Component{
+    // 入参类型
     static propTypes={
         items:PropTypes.array,
-        itemStyle:PropTypes.object,
-        actionTitleStyle:PropTypes.object,
-        itemTitleStyle:PropTypes.object,
         modalTitle:PropTypes.string,
+        visible: PropTypes.bool
     }
+
+    // 默认值
     static defaultProps={
-        items:[],
-        itemStyle:{},
-        actionTitleStyle:{},
-        itemTitleStyle:{},
-        modalTitle:''
+        items:[
+            {
+                title: '拍照',
+                click: () => {
+                    console.log('拍照');
+                }
+            },
+            {
+                title: '录像',
+                click: () => {
+                    console.log('录像');
+                }
+            }
+        ],
+        modalTitle:'你需要拍照或录像？',
+        visible: false
     }
 
-    constructor(props){
-        super(props);
-        this.state = {
-            modalVisible:true,
-        };
+   state = {
+        modalVisible: this.props.visible,
+    };
+    
+    // 该钩子函数表示当父组件的props入参改变时调用，常用于父组件入参变化影响子组件渲染
+    UNSAFE_componentWillReceiveProps(newProps){
+        this.setState({modalVisible:newProps.visible});
     }
-
-    showModal(){
-        this.setState({modalVisible:true});
-    }
-
+    
     cancelModal(){
         this.setState({modalVisible:false});
     }
@@ -48,14 +57,14 @@ class ActionSheetComp extends Component{
            return(
                <TouchableOpacity
                    key={i}
-                   style={[styles.actionItem,this.props.itemStyle]}
+                   style={styles.actionItem}
                    onPress={item.click}>
-                   <Text style={[styles.actionItemTitle,this.props.itemTitleStyle]}
-                   >{item.title}</Text>
+                   <Text style={styles.actionItemTitle}>
+                        {item.title}
+                    </Text>
                </TouchableOpacity>
                );
         });
-
 
         return (
             <Modal 
@@ -67,15 +76,16 @@ class ActionSheetComp extends Component{
                 <View style={styles.modalStyle}>
                     <View style={styles.subView}>
                         <View style={styles.itemContainer}>
-                            <Text style={[styles.actionTitle,this.props.actionTitleStyle]}
-                            >{this.props.modalTitle}</Text>
+                            <Text style={styles.actionTitle}>
+                                {this.props.modalTitle}
+                            </Text>
                             {actionSheets}
                         </View>
                         <View style={[styles.itemContainer]}>
                             <TouchableOpacity
-                                style={[styles.actionItem,this.props.itemStyle,{borderTopWidth:0}]}
+                                style={[styles.actionItem, {borderTopWidth:0}]}
                                 onPress={()=>this.setState({modalVisible:false})}>
-                                <Text style={[styles.actionItemTitle,this.props.itemTitleStyle]}>取消</Text>
+                                <Text style={styles.actionItemTitle}>取消</Text>
                             </TouchableOpacity>
                         </View>
                     </View>

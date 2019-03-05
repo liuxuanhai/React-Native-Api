@@ -1,0 +1,2 @@
+npm install react-native-svg -S
+react-native link react-native-svg

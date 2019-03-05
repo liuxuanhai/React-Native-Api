@@ -1371,7 +1371,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   _reactNative.AppRegistry.registerComponent(_app.name, function () {
     return _App.default;
   });
-},0,[1,2,557,562],"index.js");
+},0,[1,2,557,561],"index.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {
@@ -88442,7 +88442,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactNative = _$$_REQUIRE(_dependencyMap[9], "react-native");
 
-  var _SectionListComp = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[10], "../example/comp/SectionListComp"));
+  var _AnimatedComp = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[10], "../example/comp/Animated/AnimatedComp"));
 
   var _jsxFileName = "d:\\GitProjects\\LatestVersionRN\\src\\views\\MainView.js";
   var _components = {
@@ -88483,7 +88483,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
             fileName: _jsxFileName,
             lineNumber: 8
           }
-        }, _react.default.createElement(_SectionListComp.default, {
+        }, _react.default.createElement(_AnimatedComp.default, {
           __source: {
             fileName: _jsxFileName,
             lineNumber: 9
@@ -88497,7 +88497,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   MainView = _wrapComponent("MainView")(MainView);
   var _default2 = MainView;
   exports.default = _default2;
-},558,[1,559,19,20,27,30,33,47,197,2,563],"src\\views\\MainView.js");
+},558,[1,559,19,20,27,30,33,47,197,2,564],"src\\views\\MainView.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _interopRequireWildcard(obj) {
     if (obj && obj.__esModule) {
@@ -88531,7 +88531,7 @@ __d(function(global, require, _aUnused, _bUnused, module, exports, _cUnused) {
   "name": "LatestVersionRN",
   "displayName": "LatestVersionRN"
 };
-},562,[],"app.json");
+},561,[],"app.json");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -88542,37 +88542,31 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   });
   exports.default = void 0;
 
-  var _toConsumableArray2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[2], "@babel/runtime/helpers/toConsumableArray"));
+  var _classCallCheck2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[2], "@babel/runtime/helpers/classCallCheck"));
 
-  var _classCallCheck2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[3], "@babel/runtime/helpers/classCallCheck"));
+  var _createClass2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[3], "@babel/runtime/helpers/createClass"));
 
-  var _createClass2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[4], "@babel/runtime/helpers/createClass"));
+  var _possibleConstructorReturn2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[4], "@babel/runtime/helpers/possibleConstructorReturn"));
 
-  var _possibleConstructorReturn2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[5], "@babel/runtime/helpers/possibleConstructorReturn"));
+  var _getPrototypeOf2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[5], "@babel/runtime/helpers/getPrototypeOf"));
 
-  var _getPrototypeOf3 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[6], "@babel/runtime/helpers/getPrototypeOf"));
+  var _inherits2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[6], "@babel/runtime/helpers/inherits"));
 
-  var _inherits2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7], "@babel/runtime/helpers/inherits"));
+  var _react = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[7], "react"));
 
-  var _react = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[8], "react"));
+  var _index = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[8], "./../../../../node_modules/react-transform-hmr/lib/index.js"));
 
-  var _index = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[9], "./../../../node_modules/react-transform-hmr/lib/index.js"));
+  var _reactNative = _$$_REQUIRE(_dependencyMap[9], "react-native");
 
-  var _reactNative = _$$_REQUIRE(_dependencyMap[10], "react-native");
-
-  var _jsxFileName = "d:\\GitProjects\\LatestVersionRN\\src\\example\\comp\\SectionListComp.js";
+  var _jsxFileName = "d:\\GitProjects\\LatestVersionRN\\src\\example\\comp\\Animated\\AnimatedComp.js";
   var _components = {
-    SectionListComp: {
-      displayName: "SectionListComp"
-    },
-    Separator: {
-      displayName: "Separator",
-      isInFunction: true
+    AnimatedComp: {
+      displayName: "AnimatedComp"
     }
   };
 
   var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index.default)({
-    filename: "d:\\GitProjects\\LatestVersionRN\\src\\example\\comp\\SectionListComp.js",
+    filename: "d:\\GitProjects\\LatestVersionRN\\src\\example\\comp\\Animated\\AnimatedComp.js",
     components: _components,
     locals: [module],
     imports: [_react.default]
@@ -88584,304 +88578,126 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     };
   }
 
-  var SectionListComp = function (_Component) {
-    (0, _inherits2.default)(SectionListComp, _Component);
+  var AnimatedComp = function (_Component) {
+    (0, _inherits2.default)(AnimatedComp, _Component);
 
-    function SectionListComp() {
-      var _getPrototypeOf2;
-
+    function AnimatedComp(props) {
       var _this;
 
-      (0, _classCallCheck2.default)(this, SectionListComp);
+      (0, _classCallCheck2.default)(this, AnimatedComp);
+      _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(AnimatedComp).call(this, props));
 
-      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-        args[_key] = arguments[_key];
-      }
+      _this._onPress = function () {
+        _reactNative.Animated.stagger(1000, [_reactNative.Animated.delay(1000), _reactNative.Animated.timing(_this.state.fadeInOpacity, {
+          toValue: 1,
+          easing: _reactNative.Easing.linear,
+          duration: 2000
+        }), _reactNative.Animated.timing(_this.state.translateValue, {
+          toValue: 0,
+          easing: _reactNative.Easing.linear,
+          duration: 1000
+        }), _reactNative.Animated.decay(_this.state.bounceValue, {
+          velocity: 0.1,
+          deceleration: 0.997
+        })]).start();
+      };
 
-      _this = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf2 = (0, _getPrototypeOf3.default)(SectionListComp)).call.apply(_getPrototypeOf2, [this].concat(args)));
       _this.state = {
-        sections: [],
-        refreshing: false
+        fadeInOpacity: new _reactNative.Animated.Value(0.1),
+        translateXYValue: new _reactNative.Animated.ValueXY({
+          x: 0,
+          y: 0
+        }),
+        translateValue: new _reactNative.Animated.Value(1),
+        bounceValue: new _reactNative.Animated.Value(1)
       };
-
-      _this._renderSectionHeader = function (_ref) {
-        var title = _ref.section.title;
-        return _react.default.createElement(_reactNative.View, {
-          style: styles.titleViewStyle,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 29
-          }
-        }, _react.default.createElement(_reactNative.Text, {
-          style: styles.titleTextStyle,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 30
-          }
-        }, title));
-      };
-
-      _this._renderItem = function (_ref2) {
-        var item = _ref2.item,
-            index = _ref2.index,
-            section = _ref2.section;
-        return _react.default.createElement(_reactNative.View, {
-          style: styles.itemViewStyle,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 37
-          }
-        }, _react.default.createElement(_reactNative.Text, {
-          style: styles.itemTextStyle,
-          key: item.key,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 38
-          }
-        }, item.key));
-      };
-
-      _this._renderListEmptyComp = function () {
-        return _react.default.createElement(_reactNative.View, {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 45
-          }
-        }, _react.default.createElement(_reactNative.Text, {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 46
-          }
-        }, "\u6CA1\u6709\u6570\u636E\u65F6\u663E\u793A\u672C\u6BB5\u6587\u5B57"));
-      };
-
-      _this._renderSeparator = function () {
-        return _wrapComponent("Separator")(function (_Component2) {
-          (0, _inherits2.default)(Separator, _Component2);
-
-          function Separator() {
-            (0, _classCallCheck2.default)(this, Separator);
-            return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf3.default)(Separator).apply(this, arguments));
-          }
-
-          (0, _createClass2.default)(Separator, [{
-            key: "render",
-            value: function render() {
-              return _react.default.createElement(_reactNative.View, {
-                style: styles.separatorStyle,
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 57
-                }
-              });
-            }
-          }]);
-          return Separator;
-        }(_react.Component));
-      };
-
-      _this._onEndReached = function () {
-        _this.setState({
-          refreshing: true
-        });
-
-        var sections = (0, _toConsumableArray2.default)(_this.state.sections);
-        var section = {};
-        section.title = '(new)列表组' + Math.floor(Math.random() * 10000);
-        section.data = [];
-
-        for (var n = 0; n < 5; n++) {
-          var item = {};
-          item.key = 'key' + n;
-          section.data.push(item);
-        }
-
-        sections.push(section);
-        setTimeout(function () {
-          _this.setState({
-            sections: sections,
-            refreshing: false
-          });
-        }, 2000);
-      };
-
-      _this._onRefresh = function () {
-        _this.setState({
-          refreshing: true
-        });
-
-        setTimeout(function () {
-          _this.setState({
-            refreshing: false
-          });
-        }, 2000);
-      };
-
       return _this;
     }
 
-    (0, _createClass2.default)(SectionListComp, [{
+    (0, _createClass2.default)(AnimatedComp, [{
       key: "componentDidMount",
-      value: function componentDidMount() {
-        var sections = [];
-
-        for (var i = 0; i < 4; i++) {
-          var section = {};
-          section.title = '列表组' + (i + 1);
-          section.data = [];
-
-          for (var n = 0; n < 5; n++) {
-            var item = {};
-            item.key = 'key' + (n + 1);
-            section.data.push(item);
-          }
-
-          sections.push(section);
-        }
-
-        this.setState({
-          sections: sections
-        });
-      }
+      value: function componentDidMount() {}
     }, {
       key: "render",
       value: function render() {
-        var _this2 = this;
-
+        var fadeInOpacity = this.state.fadeInOpacity;
         return _react.default.createElement(_reactNative.View, {
-          style: {
-            flex: 1
-          },
+          style: styles.container,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 98
+            lineNumber: 118
           }
-        }, _react.default.createElement(_reactNative.View, {
-          style: styles.headerViewStyle,
+        }, _react.default.createElement(_reactNative.Animated.View, {
+          style: [styles.viewStyle, {
+            opacity: fadeInOpacity,
+            transform: [{
+              translateX: this.state.translateValue.interpolate({
+                inputRange: [0, 1],
+                outputRange: [100, 0]
+              })
+            }, {
+              scale: this.state.bounceValue
+            }]
+          }],
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 99
+            lineNumber: 119
           }
         }, _react.default.createElement(_reactNative.Text, {
-          style: styles.headerTextStyle,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 100
+            lineNumber: 163
           }
-        }, "\u6211\u7684APP")), _react.default.createElement(_reactNative.SectionList, {
-          ref: function ref(view) {
-            _this2.mySectionList = view;
-          },
-          style: styles.scrollViewStyle,
-          sections: this.state.sections,
-          renderItem: this._renderItem,
-          renderSectionHeader: this._renderSectionHeader,
-          renderSectionFooter: function renderSectionFooter() {},
-          ListHeaderComponent: function ListHeaderComponent() {
-            return _react.default.createElement(_reactNative.View, {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 109
-              }
-            });
-          },
-          ListFooterComponent: function ListFooterComponent() {
-            return _react.default.createElement(_reactNative.View, {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 110
-              }
-            });
-          },
-          ListEmptyComponent: this._renderListEmptyComp(),
-          inverted: false,
-          stickySectionHeadersEnabled: true,
-          horizontal: false,
-          showsVerticalScrollIndicator: false,
-          showsHorizontalScrollIndicator: false,
-          scrollEnabled: true,
-          onEndReachedThreshold: 0.01,
-          onEndReached: this._onEndReached,
-          onMomentumScrollBegin: function onMomentumScrollBegin() {},
-          onMomentumScrollEnd: function onMomentumScrollEnd() {},
-          onScrollBeginDrag: function onScrollBeginDrag() {},
-          onScrollEndDrag: function onScrollEndDrag() {},
-          或: true,
-          refreshControl: _react.default.createElement(_reactNative.RefreshControl, {
-            refreshing: this.state.refreshing,
-            onRefresh: this._onRefresh.bind(this),
-            tintColor: "#ffffff",
-            title: "\u52A0\u8F7D\u4E2D...",
-            titleColor: "#000000",
-            colors: ['#ff0000', '#00ff00', '#0000ff'],
-            progressBackgroundColor: "#ffffff",
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 132
-            }
-          }),
+        }, "Hello RN!")), _react.default.createElement(_reactNative.TouchableOpacity, {
+          style: styles.btnContainerStyle,
+          onPress: this._onPress,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 102
+            lineNumber: 166
           }
-        }));
+        }, _react.default.createElement(_reactNative.Text, {
+          style: {
+            color: '#FFFFFF'
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 167
+          }
+        }, "\u89E6\u53D1\u52A8\u753B")));
       }
     }]);
-    return SectionListComp;
+    return AnimatedComp;
   }(_react.Component);
 
-  SectionListComp = _wrapComponent("SectionListComp")(SectionListComp);
+  AnimatedComp = _wrapComponent("AnimatedComp")(AnimatedComp);
 
   var styles = _reactNative.StyleSheet.create({
-    scrollViewStyle: {
+    container: {
       flex: 1,
-      marginLeft: 10,
-      marginRight: 10
-    },
-    headerViewStyle: {
-      height: 50,
-      backgroundColor: '#f4511e',
       justifyContent: 'center',
       alignItems: 'center'
     },
-    headerTextStyle: {
-      fontSize: 20,
-      color: '#FFFFFF'
+    viewStyle: {
+      width: 100,
+      height: 100,
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderWidth: 1
     },
-    titleViewStyle: {
-      backgroundColor: '#E4E4E4',
-      marginTop: 20,
+    btnContainerStyle: {
+      width: 100,
       height: 30,
-      justifyContent: 'center',
-      alignItems: 'center'
-    },
-    titleTextStyle: {
-      color: 'red',
-      fontSize: 24
-    },
-    itemViewStyle: {
-      height: 70,
-      borderWidth: 1,
+      marginTop: 20,
       borderRadius: 10,
-      marginTop: 5,
       justifyContent: 'center',
-      alignItems: 'center'
-    },
-    itemTextStyle: {
-      color: 'red',
-      fontSize: 20
-    },
-    separatorStyle: {
-      borderColor: 'blue',
-      borderBottomWidth: 1,
-      marginTop: 5,
-      marginBottom: 5
+      alignItems: 'center',
+      backgroundColor: 'red'
     }
   });
 
-  var _default2 = SectionListComp;
+  var _default2 = AnimatedComp;
   exports.default = _default2;
-},563,[1,559,15,19,20,27,30,33,47,197,2],"src\\example\\comp\\SectionListComp.js");
+},564,[1,559,19,20,27,30,33,47,197,2],"src\\example\\comp\\Animated\\AnimatedComp.js");
 __r(81);
 __r(0);
 //# sourceMappingURL=index.map

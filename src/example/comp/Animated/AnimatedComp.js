@@ -85,14 +85,14 @@ class AnimatedComp extends Component {
         // Animated.parallel(Animates<Array>, [conf<Object>])
         // Animated.sequence(Animates<Array>)
         // Animated.stagger(delayTime<Number>, Animates<Array>)
-        Animated.stagger(5000,[
-            Animated.delay(5000), // 延时5秒后开始第一个动画
+        Animated.stagger(1000,[
+            Animated.delay(1000), // 延时5秒后开始第一个动画
             Animated.timing(
                 this.state.fadeInOpacity, // 动画中的变量值
                 {
                   toValue: 1, // 动画中的变量值最终数值设定
                   easing: Easing.linear, // 动画类型
-                  duration: 3000, // 让动画持续一段时间
+                  duration: 2000, // 让动画持续一段时间
                 }
             ),
             Animated.timing(
