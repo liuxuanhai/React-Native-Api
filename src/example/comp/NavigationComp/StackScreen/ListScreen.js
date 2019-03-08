@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import { Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 
-
 class ListScreen extends Component {
-
     static navigationOptions = ({ navigation }) => ({
-        title: 'ListScreen',
+        headerTitle: 'ListScreen',
         headerStyle: {
             backgroundColor: '#f4511e'
         },
@@ -21,7 +19,7 @@ class ListScreen extends Component {
                 style={styles.buttonContainer}
                 onPress={()=>{navigation.goBack();}}
             >
-                <Text style={styles.headerLeftTextStyle}>返回 {navigation.getParam('prevScreenTitle','为空时显示这段文字')} 页</Text>
+                <Text style={styles.headerLeftTextStyle}>返回{navigation.getParam('prevScreenTitle','为空时显示这段文字')}</Text>
             </TouchableOpacity>
         ),
         headerRight: (
@@ -29,14 +27,18 @@ class ListScreen extends Component {
                 style={styles.buttonContainer} 
                 onPress={()=>{navigation.navigate('Item', { prevScreenTitle: 'ListScreen' });}}
             >
-                <Text style={styles.headerRightTextStyle}>进入 ItemScreen 页</Text>
+                <Text style={styles.headerRightTextStyle}>进入ItemScreen</Text>
             </TouchableOpacity>
         )
     })
 
     render(){
+        const { navigation } = this.props;
+        console.log(navigation.getParam('defaultParam'));
         return(
-            <Text>List Data....</Text>
+            <View style={styles.viewStyle}>
+                <Text>This is ListScreen！</Text>
+            </View>
         );
     }
 }
@@ -46,11 +48,13 @@ ListScreen.propTypes = {
 };
 
 const styles = StyleSheet.create({
+    viewStyle: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
     buttonContainer: {
         backgroundColor: '#FFFFFF',
-        borderRadius: 30,
-        borderWidth: 1,
-        height: 30,
         justifyContent: 'center',
         alignItems: 'center',
         padding: 5

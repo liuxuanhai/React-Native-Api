@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 
 class AuthScreen extends Component {
     static navigationOptions = {
-        title: 'AuthScreen',
+        headerTitle: 'AuthScreen',
         headerStyle: {
             backgroundColor: '#f4511e'
         },
@@ -18,33 +18,34 @@ class AuthScreen extends Component {
 
     _navigate = () => {
         const { navigation } = this.props;
-        navigation.navigate('List', { prevScreenTitle: 'AuthScreen' }); // 要区分与navigation.push方法的效果
+        navigation.navigate('List', {prevScreenTitle:'AuthScreen'}); // 要区分与navigation.push方法的效果
     }
 
     render(){
         return(
-            <TouchableOpacity
-                style={styles.buttonStyle}
-                onPress={this._navigate}
-            >
-                <Text style={styles.textStyle}>进入 ListScreen 页</Text>
-            </TouchableOpacity>
+            <View style={styles.viewStyle}>
+                <TouchableOpacity
+                    style={styles.buttonStyle}
+                    onPress={this._navigate}
+                >
+                    <Text style={styles.textStyle}>进入ListScreen</Text>
+                </TouchableOpacity>
+            </View>
         );
     }
 }
 
 const styles = StyleSheet.create({
-    buttonStyle: {
-        backgroundColor: '#009688',
-        marginTop: 30,
-        marginLeft: 30,
-        marginRight: 30,
-        borderRadius: 30,
-        borderWidth: 1,
-        height: 50,
+    viewStyle: {
+        flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        padding: 5
+    },
+    buttonStyle: {
+        backgroundColor: '#009688',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 10
     },
     textStyle: {
         color: '#FFFFFF',

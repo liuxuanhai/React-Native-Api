@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import ScrollAnimatedComp from '../example/comp/Animated/ScrollAnimatedComp';
+import StackNavigator from '../example/comp/NavigationComp/StackNavigator';
 
 class MainView extends Component {
     render(){
         return (
             <View style={{flex:1}}>
-                <ScrollAnimatedComp />
+                <StackNavigator /> 
             </View>
         );
     }

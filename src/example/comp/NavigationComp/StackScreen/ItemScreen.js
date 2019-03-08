@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 class ItemScreen extends Component {
 
     static navigationOptions = ({ navigation }) => ({
-        title: 'ItemScreen',
+        headerTitle: 'ItemScreen',
         headerStyle: {
             backgroundColor: '#f4511e'
         },
@@ -14,13 +14,13 @@ class ItemScreen extends Component {
             textAlign: 'center',
             color: '#FFFFFF',
             fontSize: 26
-        },
+        }, 
         headerLeft:(
             <TouchableOpacity 
                 style={styles.buttonContainer}
                 onPress={()=>{navigation.goBack();}}
             >
-                <Text style={styles.headerLeftTextStyle}>返回 {navigation.getParam('prevScreenTitle','为空时显示这段文字')} 页</Text>
+                <Text style={styles.headerLeftTextStyle}>返回{navigation.getParam('prevScreenTitle','为空时显示这段文字')}</Text>
             </TouchableOpacity>
         ),
         headerRight: (
@@ -28,7 +28,7 @@ class ItemScreen extends Component {
                 style={styles.buttonContainer}
                 onPress={navigation.getParam('increaseCount')}
             >
-            <Text style={styles.headerLeftTextStyle}>计数器 +1</Text> 
+            <Text style={styles.headerRightTextStyle}>计数器 +1</Text> 
         </TouchableOpacity>
         )
     })
@@ -51,12 +51,12 @@ class ItemScreen extends Component {
 
         return(
             <View style={styles.viewContainer}>
-                <Text>Items Data...({this.state.count})</Text>
+                <Text>计数器结果：{this.state.count}</Text>
                 <TouchableOpacity 
                     style={[styles.buttonContainer, styles.modalStyle]}
-                    onPress={()=> navigation.navigate('MyModal')}
+                    onPress={()=> navigation.navigate('Modal')}
                 >
-                    <Text style={styles.modalTextStyle}>进入 ModalScreen 页</Text>
+                    <Text style={styles.modalTextStyle}>进入ModalScreen</Text>
                 </TouchableOpacity>
             </View>
         );
@@ -75,9 +75,6 @@ const styles = StyleSheet.create({
     },
     buttonContainer: {
         backgroundColor: '#FFFFFF',
-        borderRadius: 30,
-        borderWidth: 1,
-        height: 30,
         justifyContent: 'center',
         alignItems: 'center',
         padding: 5
@@ -90,7 +87,6 @@ const styles = StyleSheet.create({
     },
     modalStyle: {
         marginTop: 10,
-        borderRadius: 30,
         borderWidth: 1,
         padding: 5
     },

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Text, View, TouchableOpacity, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 
-class ModalScreen extends Component {
+class ModalScreen extends Component { 
     render() {
         const { navigation } = this.props;
         return (
@@ -12,7 +12,7 @@ class ModalScreen extends Component {
                     style={styles.buttonContainer}
                     onPress={()=>{navigation.goBack();}}
                 >
-                    <Text>Dismiss</Text>
+                    <Text>关闭</Text>
                 </TouchableOpacity>
             </View>
         );
@@ -30,9 +30,7 @@ const styles = StyleSheet.create({
     },
     buttonContainer: {
         backgroundColor: '#FFFFFF',
-        borderRadius: 30,
         borderWidth: 1,
-        height: 30,
         justifyContent: 'center',
         alignItems: 'center',
         padding: 5
