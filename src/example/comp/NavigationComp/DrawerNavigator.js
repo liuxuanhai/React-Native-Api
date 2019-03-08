@@ -3,7 +3,7 @@ import { View, ScrollView } from 'react-native';
 import { HeaderScreen, HomeScreen, NotificationsScreen } from './DrawerScreen';
 import { createDrawerNavigator, createAppContainer,DrawerItems, SafeAreaView } from 'react-navigation';
 
-
+// 侧栏调用建议使用https://github.com/react-native-community/react-native-side-menu
 const CustomDrawerContentComponent = (props) => {
     return(
         <ScrollView>

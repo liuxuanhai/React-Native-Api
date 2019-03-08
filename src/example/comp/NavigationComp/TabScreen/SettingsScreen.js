@@ -7,7 +7,7 @@ class SettingsScreen extends React.Component {
     const { navigation } = this.props;
     return (
         <View style={styles.viewContainer}>
-            <Text style={styles.contextTextStyle}>This is a SettingsScreen!</Text>
+            <Text style={styles.contextTextStyle}>SettingsScreen!</Text>
             <TouchableOpacity 
                 style={styles.buttonContainer}
                 onPress={()=>{navigation.goBack();}}

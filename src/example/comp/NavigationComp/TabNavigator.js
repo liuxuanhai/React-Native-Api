@@ -14,24 +14,27 @@ const rootTab = createBottomTabNavigator(
         backBehavior: 'initialRoute', // 触发navigation.goBack()方法时是否包括Tab页间切换的的返回操作，不包括为none，包括为initialRoute(默认包括)
         // tabBarComponent : (props) => {return <BottomTabBar {...props} />}, // 可选，覆盖用作标签栏的组件，一般会用不上
         tabBarOptions: {
-            activeTintColor: 'red', // 活动选项卡的标签和图标颜色
+            activeTintColor: 'red', // 活动选项卡标签文本和图标颜色
             activeBackgroundColor: '#FFFFFF', // 活动选项卡的背景色
-            inactiveTintColor: 'gray', // 非活动选项卡的标签和图标颜色
+            inactiveTintColor: 'gray', // 非活动选项卡的标签文本和图标颜色
             inactiveBackgroundColor: '#FFFFFF', // 非活动选项卡的背景色
             showLabel: true, // 是否显示选项卡的标签, 默认值为 true
-            showIcon: false, // 是否显示 Tab 的图标，默认为false
+            showIcon: true, // 是否显示 Tab 的图标，默认为false
+            // 选项卡栏的样式
             style: {
                 borderTopColor: 'red',
                 height: 50
-            }, // 选项卡栏的样式
+            }, 
+            // 选项卡的默认样式
             tabStyle: {
                 flex: 1,
                 justifyContent: 'center',
                 alignItems: 'center'
-            }, // 选项卡的样式
+            }, 
+            // 选项卡标签文本的默认样式
             labelStyle: {
                 fontSize: 14
-            }, // 选项卡标签的样式
+            }, 
             allowFontScaling: true // 允许标签字体自动缩放以对界面更友好，默认为: true
         },
         defaultNavigationOptions: ({ navigation }) => ({
@@ -43,9 +46,15 @@ const rootTab = createBottomTabNavigator(
                 console.log(focused); // 是否处于活动状态,是为true
                 console.log(horizontal); // 是否处于横屏,是为true
                 console.log(tintColor); // 状态颜色值
+                let textStyle = {};
+                if(focused){
+                    textStyle = {
+                        color: 'red'
+                    };
+                }
                 return(
                     <View>
-                        <Text>icon-{routeName}</Text>
+                        <Text style={textStyle}>{routeName}-Icon</Text>
                     </View>
                 );
             },
@@ -57,7 +66,7 @@ const rootTab = createBottomTabNavigator(
             //     console.log(tintColor); // 状态颜色值
             //     return(
             //         <View>
-            //             <Text>label-{routeName}</Text>
+            //             <Text>{routeName}-Label</Text>
             //         </View>
             //     );
             // }

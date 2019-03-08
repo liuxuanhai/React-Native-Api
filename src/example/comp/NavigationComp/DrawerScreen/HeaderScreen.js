@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 
-class HeaderScreen extends Component {
+class HeaderScreen extends Component { 
     static navigationOptions = ({ navigation }) => ({
         drawerLabel: () => {
             return(
