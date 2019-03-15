@@ -9,7 +9,7 @@
 ----
 列表-FlatList
 组列表-SectionList
-----
+---- 
 图标-iconfont、svg
 图片-Image
 图片剪辑-ImageEditor
@@ -47,7 +47,7 @@ android权限请求-PermissionsAndroid
 网络请求-Fetch
 -----
 外链APP-Linking
-弹出网页-WebView
+弹出网页-WebView 
 -----
 应用前、后台状态-AppState
 屏幕宽高-Dimensions
@@ -61,11 +61,6 @@ android权限请求-PermissionsAndroid
 redux
 
 打包篇
-
-云服务篇
-阿里云OSS
-
-快速构建篇
 
 
 

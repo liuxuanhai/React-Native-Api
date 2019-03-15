@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, WebView, Button, Modal, Text } from 'react-native';
+// import { WebView } from 'react-native-webview';
 
 // WebViewComp两大用处：
 // 通过modal弹出，显示一个网页

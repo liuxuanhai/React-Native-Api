@@ -5,12 +5,17 @@ import { View, Button, Linking } from 'react-native';
 class LinkingAPI extends React.Component {
 
     _onPress = () => {
-        Linking.openURL(`tel:${'10086'}`);
+        // Linking.openURL(`tel:${'10086'}`);
         // Linking.openURL('geo:37.2122 , 12.222');
         // Linking.openURL('http://www.baidu.com');
         // Linking.openURL('mailto:10000@qq. com');
         // Linking.openURL('smsto:10086');
         // Linking.openURL('weixin://');
+        Linking.canOpenURL('auth://').then(canOpen=>{
+            if(canOpen){
+                Linking.openURL('auth://');
+            }
+        });
     } 
 
     render(){

@@ -22,7 +22,7 @@ class SliderComp extends React.Component{
         return(
             <View style={styles.container}>
                 <Slider 
-                    style={styles.SliderStyle} // 样式，需要至少设置一个宽度
+                    style={{width: 300, height: 50}} // 样式，需要至少设置一个宽度
                     disabled={false} // 如果为true，用户就不能移动滑块。默认为false
                     minimumValue={0} // 滑块的最小值（当滑块滑到最左端时表示的值）。默认为0。
                     maximumValue={100} // 滑块的最大值（当滑块滑到最右端时表示的值）。默认为1。
@@ -45,9 +45,6 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center'
-    },
-    SliderStyle: {
-        width: 300
     }
 });
 

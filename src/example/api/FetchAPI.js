@@ -1,13 +1,14 @@
 import React, {Component} from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Alert } from 'react-native';
 
 class FetchAPI extends Component {
 
+    // get请求-无参
     _getJson = () => {
         fetch('http://www.helloui.net/api/json/products.json')
             .then((resp) => resp.json())
             .then((json)=>{
-                console.log(json); // Array(3) [Object, Object, Object]
+                Alert.alert('请求成功：', JSON.stringify(json)); // json：Array(3) [Object, Object, Object]
             })
             .catch((error)=>{
                 console.log(error);
@@ -15,11 +16,12 @@ class FetchAPI extends Component {
         );
     }
 
+    // get请求-带参
     _getWithParam = () => {
         fetch('http://www.helloui.net/rn_get?name=admin')
             .then((resp) => resp.json())
             .then((json)=>{
-                console.log(json); // Object {name: "admin"}
+                Alert.alert('请求成功：', JSON.stringify(json)); // json：Object {name: "admin"}
             })
             .catch((error)=>{
                 console.log(error);
@@ -27,6 +29,7 @@ class FetchAPI extends Component {
         );
     }
 
+    // post请求
     _post = () => {
         let data = JSON.stringify({
             name:'admin'
@@ -37,12 +40,13 @@ class FetchAPI extends Component {
                 method: 'POST',
                 body,
                 headers: {
+                    'Content-Type':'multipart/form-data',
                     'Accept': 'application/json'
                 }
             })
             .then((resp) => resp.json())
             .then((json)=>{
-                console.log(json); // Object {name: "admin"}
+                Alert.alert('请求成功：', JSON.stringify(json)); // json：Object {name: "admin"}
             })
             .catch((error)=>{
                 console.log(error);

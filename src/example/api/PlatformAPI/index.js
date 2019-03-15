@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, Platform } from 'react-native';
 
-class PlatformAPI extends Component {
+class PlatformAPI extends Component { 
 
     constructor(props) {
         super(props);
@@ -15,7 +15,9 @@ class PlatformAPI extends Component {
     }
 
     render() {
+        // 方式一
         const CompFromExpansionName = require('./Comp').default;
+        // 方式二
         const CompFromPlatfromSelect = Platform.select({
             ios: () => require('./CompIOS'),
             android: () => require('./CompAndroid')
@@ -23,8 +25,9 @@ class PlatformAPI extends Component {
 
         return (
             <View>
-                <Text>App OS is {this.state.os}@version{this.state.version}</Text>
-                <Text>Auto get different component from different OS:</Text>
+                <Text>os:{this.state.os}</Text>
+                <Text>version:{this.state.version}</Text>
+                <Text>自动根据不同的系统装载不同的组件：</Text>
                 <CompFromExpansionName />
                 <CompFromPlatfromSelect />
             </View>

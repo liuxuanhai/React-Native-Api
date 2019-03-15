@@ -25,7 +25,7 @@ class StatusBarComp extends React.Component{
         return (
             <View style={styles.container}>
                 <StatusBar
-                    animated={this.state.animated} // 指定状态栏的变化是否应以动画形式呈现。目前支持这几种样式：backgroundColor, barStyle和hidden。
+                    animated={this.state.animated} // 指定状态栏的变化是否应以动画形式呈现。
                     barStyle={this.state.barStyle} // 设置状态栏文本的颜色。枚举类型：'default'|'light-content'|'dark-content'
                     hidden={this.state.hidden} // 是否隐藏状态栏
                     backgroundColor={this.state.backgroundColor} // (android)状态栏的背景色
@@ -48,26 +48,26 @@ class StatusBarComp extends React.Component{
                     />
                 </View>
                 <View style={styles.viewStyle}>
-                    <Text>设置背景色：</Text>
+                    <Text>设置背景色(android)：</Text>
                     <Button title='红色' onPress={()=>{this.setState({backgroundColor:'red'});}}/>
                     <Button title='蓝色' onPress={()=>{this.setState({backgroundColor:'blue'});}}/>
                     <Button title='灰色' onPress={()=>{this.setState({backgroundColor:'gray'});}}/>
                 </View>
                 <View style={styles.viewStyle}>
-                    <Text>状态栏了占位(透明时不占位置)：</Text>
+                    <Text>状态栏了占位(透明时不占位置,android)：</Text>
                     <Button 
                         title={this.state.translucent?'不透明':'透明'} 
                         onPress={()=>{this.setState({translucent:!this.state.translucent});}}
                     />
                 </View>
                 <View style={styles.viewStyle}>
-                    <Text>设置样式：</Text>
+                    <Text>设置文本样式：</Text>
                     <Button title='default' onPress={()=>{this.setState({barStyle:'default'})}}/>
                     <Button title='light-content' onPress={()=>{this.setState({barStyle:'light-content'});}}/>
                     <Button title='dark-content' onPress={()=>{this.setState({barStyle:'dark-content'});}}/>
                 </View>
                 <View style={{flexDirection:'row',alignItems:'center'}}>
-                    <Text>显示或隐藏动画效果：</Text>
+                    <Text>显示或隐藏动画效果(ios)：</Text>
                     <Button title='fade' onPress={()=>{this.setState({showHideTransition:'fade'});}}/>
                     <Button title='slide' onPress={()=>{this.setState({showHideTransition:'slide'});}}/>
                 </View>
